@@ -1,18 +1,9 @@
-# Dependabot configuration for automated dependency updates.
-# Docs: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-#
-# One npm entry with directory "/" covers the whole pnpm workspace via the
-# root pnpm-lock.yaml; one cargo entry likewise covers the Rust workspace via
-# Cargo.lock. Updates are grouped to keep PR volume manageable in this monorepo.
-version: 2
-updates:
-  # JavaScript/TypeScript — pnpm workspace (root lockfile covers all packages/apps)
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 0
     labels:
       - "dependencies"
     groups:
@@ -33,7 +24,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
     labels:
       - "dependencies"
     groups:
@@ -48,7 +39,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
     labels:
       - "dependencies"
     groups:
@@ -65,6 +56,6 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
     labels:
       - "dependencies"
